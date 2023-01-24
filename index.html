@@ -7,7 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <title>Restaurent</title>
+    <style>
+        .table-striped>tr:nth-child(odd){
+            background-color:beige;
+        }
+    </style>
 </head>
+
 <body>
 <header id="main-header" class="bg-info text-white p-4 mb-3">
     <div class="container">
@@ -20,10 +26,10 @@
         <h5>Order Items</h5>
         <div id="error"></div>
         <form name="form-body" id="form-id" class="form-inline mb-3">
-            <input required placeholder="Choose Price" type="number" name="price" class="form-control mr-2" id="itemNum">
-            <input required placeholder="Choose Dish" name="dish" type="text" class="form-control mr-2" id="itemName">
+            <input placeholder="Choose Price" type="number" name="price" class="form-control mr-2" id="itemNum">
+            <input placeholder="Choose Dish" name="dish" type="text" class="form-control mr-2" id="itemName">
             <div class="form-group">
-                <select required name="tables" class="custom-select" id="itemType">
+                <select name="tables" class="custom-select" id="itemType">
                     <option value="Table_1">Table 1</option>
                     <option  value="Table_2">Table 2</option>
                     <option  value="Table_3">Table 3</option>
