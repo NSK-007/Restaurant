@@ -1,4 +1,4 @@
-const crudURL = `https://crudcrud.com/api/8c07b0b186fd4831820eddf04f062b96`;
+const crudURL = `https://crudcrud.com/api/444fe80712964baf8d2baa3f9fd90fb4`;
 
 window.addEventListener("DOMContentLoaded", loadAllOrders);
 
@@ -26,21 +26,13 @@ function loadAllOrders(){
 
 
 function addTableRow(t_id, table, price, dish){
-    let table_element
-    if(table==='Table_1')
-        table_element = document.querySelector('#t1');
-    else if(table==='Table_2')
-        table_element = document.querySelector('#t2');
-    else
-        table_element = document.querySelector('#t3');
-
-    // console.log(table_element.childNodes[3]);
+    console.log(table);
+    let table_element = document.querySelector(`#${table}`);
     let t_body = table_element.childNodes[3];
     
     // console.log(t_id, table, price, dish)
 
     let row = document.createElement('tr');
-    t_body.appendChild(row);
 
     let pr = document.createElement('td');
     pr.appendChild(document.createTextNode(price));
@@ -65,7 +57,8 @@ function addTableRow(t_id, table, price, dish){
     row.appendChild(document.createTextNode(' '));
     row.appendChild(dl);
 
-    table_element.appendChild(row);
+    // table_element.appendChild(t_body);
+    t_body.appendChild(row);
 }
 
 
